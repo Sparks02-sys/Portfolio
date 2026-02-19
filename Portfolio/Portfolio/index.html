@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Satyam Patel | AI/ML Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1 data-aos="fade-down">Satyam Patel</h1>
+    <p class="typing" data-aos="fade-up"></p>
+
+    <!-- Hero Buttons -->
+    <div class="buttons" data-aos="fade-up" id="hero-buttons">
+      <!-- Buttons rendered via JS -->
+    </div>
+
+    <div class="scroll-down">↓ Scroll</div>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section class="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        Passionate AI/ML engineer focused on building intelligent systems using
+        Machine Learning and Generative AI.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skills-container"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="filters">
+        <button onclick="filterProjects('All')">All</button>
+        <button onclick="filterProjects('ML')">Machine Learning</button>
+        <button onclick="filterProjects('GenAI')">GenAI</button>
+      </div>
+      <div class="projects-container"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Satyam Patel</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="skills.js"></script>
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

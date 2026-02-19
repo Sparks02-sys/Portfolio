@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Satyam Patel</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HERO STYLE HEADER -->
+  <header class="hero">
+    <h1 data-aos="fade-down">Contact Me</h1>
+    <p class="typing" data-aos="fade-up">Let's build something amazing together!</p>
+  </header>
+
+  <!-- CONTACT FORM SECTION -->
+  <main>
+    <section class="contact-section" data-aos="fade-up">
+      <h2>Get in Touch</h2>
+      <p>Fill the form below or email me directly at <a href="mailto:satyampatel21082005@gmail.com" class="icon-btn" style="padding:0 10px;"><i class="fas fa-envelope"></i></a></p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+        </div>
+        <button type="submit" class="hero-btn">Send Message</button>
+      </form>
+      <div id="success-msg" style="display:none; margin-top:15px; color:#22c55e;">Message sent successfully!</div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Satyam Patel</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    // ================= Contact Form Dummy Submit =================
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      successMsg.style.display = 'block';
+      form.reset();
+      setTimeout(() => { successMsg.style.display = 'none'; }, 3000);
+    });
+  </script>
+</body>
+</html>
